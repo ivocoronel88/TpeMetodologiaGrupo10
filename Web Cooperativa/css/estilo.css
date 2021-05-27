@@ -1,0 +1,117 @@
+body{
+    background-color: #7e4c4b;
+   
+    text-align: center;
+}
+.imagenes{
+  border: 0.2em solid #ddd;
+  padding: 0.09em;
+  width: 50%;
+  height: 50%;
+}
+.nav-bk2{
+  background: #23074d; 
+  background: -webkit-linear-gradient(to right, #3aa3aa, #3d127e);   
+  background: linear-gradient(to right, #3aa3aa, #3d127e);
+}
+
+.columnaCartoneros{
+  font-weight: 800;
+}
+
+p{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.9em;
+  color: rgb(27, 24, 37);
+  text-align: center;
+}
+label{
+    color: rgb(0, 0, 0);
+    font-size: 1.2em;
+}
+header{
+  text-align: center;
+}
+h1{
+    color: #13131a;
+    text-decoration-line: underline;
+    text-align: center;
+    text-transform: inherit;
+}
+  
+h3{
+    color: rgb(14, 6, 22);
+    text-align: left;
+  }
+h5{
+    color: rgb(37, 43, 46);
+    text-decoration-line: underline;
+  }
+
+.pagination{
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  margin: 10px;
+}
+  
+.pagination a{
+  width: 100px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  color: rgb(63, 18, 18);
+  font-size: 18px;
+  font-weight: 700;
+  transition: .3s linear;
+}
+.pagination a:hover{
+  color: #eb4d4b;
+}
+ 
+
+
+.botonEstilo{
+  border: none;
+  margin: 7px;
+  padding: 7px;
+  width: 150px;
+  font-family: "montserrat",sans-serif;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  background-size: 200%;
+  transition: 0.6s;
+}
+
+.btnColor1{
+    background-image: linear-gradient(to left,#FFC312,#EE5A24,#FFC312);
+}  
+.btnColor2{
+    background-image: linear-gradient(to left,#12CBC4,#0652DD,#12CBC4);
+} 
+.btnColor3{
+    background-image: linear-gradient(to left,#f34040,#c00e08,#f34040);
+} 
+.btnColor4{
+    background-image: linear-gradient(to left,#C4E538,#009432,#C4E538);
+}
+.botonEstilo:hover{
+  background-position: right;
+}
+.botonEstilo a{
+     color: #fff;
+}
+.botonEstilo a:hover{
+    color: #fff;
+}
+ul li a{
+  color: rgb(14, 37, 36);
+}
+ul li a:hover{
+    color: rgb(14, 37, 36);
+}
