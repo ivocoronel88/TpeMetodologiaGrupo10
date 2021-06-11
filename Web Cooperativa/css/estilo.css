@@ -14,7 +14,10 @@ body{
   background: -webkit-linear-gradient(to right, #3aa3aa, #3d127e);   
   background: linear-gradient(to right, #3aa3aa, #3d127e);
 }
-
+#map {
+  height: 100%;
+  width: 100%;
+}
 .columnaCartoneros{
   font-weight: 800;
 }

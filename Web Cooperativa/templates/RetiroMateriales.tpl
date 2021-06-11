@@ -35,8 +35,11 @@
                     </select>
                </label>
           </div>
-         <button type="submit" class="botonEstilo btnColor1">Enviar</button>
-    </form>
-    
+         
+          <button type="submit" class="botonEstilo btnColor1">Enviar</button>
+          </form>
+          
+          {include file="mapa.tpl"}
 </div>
 {include file="footer.tpl"}
+
