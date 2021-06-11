@@ -73,8 +73,6 @@ h5{
   color: #eb4d4b;
 }
  
-
-
 .botonEstilo{
   border: none;
   margin: 7px;
@@ -104,14 +102,14 @@ h5{
   background-position: right;
 }
 .botonEstilo a{
-     color: #fff;
+     color: rgb(0, 0, 0);
 }
 .botonEstilo a:hover{
-    color: #fff;
+    color: rgb(2, 1, 1);
 }
 ul li a{
-  color: rgb(14, 37, 36);
+  color: rgb(0, 0, 0);
 }
 ul li a:hover{
-    color: rgb(14, 37, 36);
+    color: rgb(0, 0, 0);
 }

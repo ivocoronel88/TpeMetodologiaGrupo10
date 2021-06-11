@@ -51,7 +51,11 @@ class View{
         $this->smarty->assign('kilos',$kilos);
         $this->smarty->display('templates/ShowKilosMes.tpl'); 
     }
-    
+    function mostrarEditarMaterial($material){
+        $this->smarty->assign('titulo',"Edicion");
+        $this->smarty->assign('material',$material);
+        $this->smarty->display('templates/ShowEdicionMaterial.tpl'); 
+    }
     function ShowUserLoc(){
         header("Location: ".BASE_URL.'user');
     }

@@ -2,6 +2,7 @@
     require_once 'Controller/Controller.php';
     require_once 'RouterClass.php';
     require_once 'Controller/UserController.php';
+    require_once 'Controller/MaterialesController.php';
     
     // CONSTANTES PARA RUTEO
     define("BASE_URL", 'http://'.$_SERVER["SERVER_NAME"].':'.$_SERVER["SERVER_PORT"].dirname($_SERVER["PHP_SELF"]).'/');
@@ -14,7 +15,6 @@
     $r->addRoute("Home", "GET", "Controller", "Home");
     
     $r->addRoute("SolicitarMateriales", "GET", "Controller", "SolicitarMateriales");
-    $r->addRoute("MaterialesyEntrega", "GET", "Controller", "MaterialesyEntrega");
     $r->addRoute("CarteleraVirtual", "GET", "Controller", "CarteleraVirtual");
     $r->addRoute("Login", "GET", "UserController", "Login");
     $r->addRoute("CartonerosActivos", "GET", "Controller", "CartonerosActivos");
@@ -22,13 +22,14 @@
     $r->addRoute("KilosMes", "GET", "Controller", "KiloMes");
 
 
+    $r->addRoute("MaterialesyEntrega", "GET", "MaterialesController", "MaterialesyEntrega");
     //ABM DE MATERIALEs
-   // $r->addRoute("insertGenre", "POST", "GenreController", "InsertGenre");
-   //$r->addRoute("deleteGenre/:ID", "GET", "GenreController", "DeleteGenre");
- //   $r->addRoute("editGenre/:ID", "GET", "GenreController", "EditGenre");
- //   $r->addRoute("modificarGenre", "POST", "GenreController", "ModificarGenre");
+    $r->addRoute("insertMaterial", "POST", "MaterialesController", "InsertMaterial");
+    $r->addRoute("deleteMaterial/:ID", "GET", "MaterialesController", "DeleteMaterial");
+    $r->addRoute("editMaterial/:ID", "GET", "MaterialesController", "EditMaterial");
+    $r->addRoute("modificarMaterial", "POST", "MaterialesController", "ModificarMaterial");
   
- //Boton user
+    //Boton user
     $r->addRoute("user", "GET", "Controller", "User");
     
     //AB de usuarios y la ista

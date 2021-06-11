@@ -11,16 +11,22 @@ class MaterialModel{
         $sentencia->execute();
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
-    function InsertUser($email,$user,$clave_encriptada){
-        $sentencia = $this->db->prepare("INSERT INTO usuario(email,user,password) VALUES(?,?,?)");
-        $sentencia->execute(array($email,$user,$clave_encriptada));
+    function GetMaterial($material_id){
+        $sentencia = $this->db->prepare("SELECT * FROM material WHERE id=?");
+        $sentencia->execute(array($material_id));
+        return $sentencia->fetch(PDO::FETCH_OBJ);
     }
-    function DeleteUser($id_user){
-        $sentencia = $this->db->prepare("DELETE FROM usuario WHERE id=?");
-        $sentencia->execute(array($id_user));
+    function InsertMaterial($tipo,$entrega){
+        $sentencia = $this->db->prepare("INSERT INTO material(tipo,entrega) VALUES(?,?)");
+        $sentencia->execute(array($tipo,$entrega));
     }
-    function EditAdmin($user_id,$admin){
-        $sentencia = $this->db->prepare("UPDATE usuario SET admin=? WHERE id=?");
-        $sentencia->execute(array($admin,$user_id));
+    function DeleteMaterial($id){
+        $sentencia = $this->db->prepare("DELETE FROM material WHERE id=?");
+        $sentencia->execute(array($id));
     }
+    function EditMaterial($id,$tipo,$entrega){
+        $sentencia = $this->db->prepare("UPDATE material SET tipo=?, entrega=? WHERE id=?");
+        $sentencia->execute(array($tipo,$entrega,$id));
+    }
+    
 }
