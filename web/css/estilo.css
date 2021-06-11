@@ -1,0 +1,192 @@
+body{
+    background-color: #7e4c4b;
+   
+    text-align: center;
+}
+
+.container{
+  margin: 0% !important;
+  padding: 0% !important;
+}
+
+.navbar{
+  background-color: rgb(102, 204, 0) !important;
+}
+
+.btnlog{
+  /*background-color: green !important;*/
+  background-image: linear-gradient(to left,darkgreen,green,darkgreen) !important;
+  border: white !important;
+}
+
+.btnlog:hover{
+  color: rgb(2, 1, 1);
+}
+
+.navtitle{
+  color: white;
+}
+
+.carousel{
+  margin: 10% auto;
+  width: 50% !important;
+}
+
+.imgcarr{
+  height: 400px !important;
+  width: 400px !important;
+}
+
+.imgnav{
+  height: 50px;
+  width: 50px;
+  margin-right: 1%;
+}
+
+.title{
+  color: white;
+  font-size: 70px;
+  text-shadow: 5px 5px 5px black;
+  padding-top: 40px;
+  padding-left: 40px;
+  margin-right: max-content;
+}
+
+.portada{
+  margin: 0% !important;
+  padding: 0% !important;
+  width: 166.9%;
+  height: 600px !important;
+  background-image: url("https://www.girsa.es/wp-content/uploads/2021/01/plastico-reciclar.jpg");
+}
+
+.hiuser{
+  color: darkgreen;
+  margin-top: 8px;
+}
+
+.txthome{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  margin-right: 5px;
+  font-size: 20px;
+  width: 166% !important;
+  color: darkgreen;
+}
+
+.imagenes{
+  padding: 0% !important;
+  margin: 0% !important;
+  width: auto;
+  height: 600px !important;
+}
+
+.nav-bk2{
+  background: #23074d; 
+  background: -webkit-linear-gradient(to right, green, rgb(102, 204, 0));   
+  background: linear-gradient(to right, green, rgb(102, 204, 0));
+}
+
+.columnaCartoneros{
+  font-weight: 800;
+}
+
+.footer{
+  background-color: green !important;
+  height: 500px;
+}
+
+.foottitle{
+  color: white;
+  text-align: center;
+  padding-top: 55px;
+  height: 200px;
+  background-color: green !important;
+  font-size: 60px;
+  width: auto;
+  margin: 0;
+}
+
+label{
+    color: rgb(0, 0, 0);
+    font-size: 1.2em;
+}
+header{
+  text-align: center;
+}
+  
+h3{
+    color: rgb(14, 6, 22);
+    text-align: left;
+  }
+h5{
+    color: rgb(37, 43, 46);
+    text-decoration-line: underline;
+  }
+
+.pagination{
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  margin: 10px;
+}
+  
+.pagination a{
+  width: 100px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  color: rgb(63, 18, 18);
+  font-size: 18px;
+  font-weight: 700;
+  transition: .3s linear;
+}
+.pagination a:hover{
+  color: #eb4d4b;
+}
+ 
+.botonEstilo{
+  border: none;
+  margin: 7px;
+  padding: 7px;
+  width: 150px;
+  font-family: "montserrat",sans-serif;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  background-size: 200%;
+  transition: 0.6s;
+}
+
+.btnColor1{
+    background-image: linear-gradient(to left,#FFC312,#EE5A24,#FFC312);
+}  
+.btnColor2{
+    background-image: linear-gradient(to left,#12CBC4,#0652DD,#12CBC4);
+} 
+.btnColor3{
+    background-image: linear-gradient(to left,#f34040,#c00e08,#f34040);
+} 
+.btnColor4{
+    background-image: linear-gradient(to left,#C4E538,#009432,#C4E538);
+}
+.botonEstilo:hover{
+  background-position: right;
+}
+.botonEstilo a{
+     color: rgb(0, 0, 0);
+}
+.botonEstilo a:hover{
+    color: rgb(2, 1, 1);
+}
+ul li a{
+  color: rgb(0, 0, 0);
+}
+ul li a:hover{
+    color: rgb(0, 0, 0);
+}
