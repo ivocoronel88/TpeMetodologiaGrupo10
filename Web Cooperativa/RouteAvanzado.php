@@ -20,8 +20,8 @@
     $r->addRoute("CartonerosActivos", "GET", "Controller", "CartonerosActivos");
     $r->addRoute("Domicilios", "GET", "Controller", "Domicilios");
     $r->addRoute("KilosMes", "GET", "Controller", "KiloMes");
-
-
+    
+    $r->addRoute("insertSolicitud", "POST", "Controller", "InsertSolicitud");
     $r->addRoute("MaterialesyEntrega", "GET", "MaterialesController", "MaterialesyEntrega");
     //ABM DE MATERIALEs
     $r->addRoute("insertMaterial", "POST", "MaterialesController", "InsertMaterial");

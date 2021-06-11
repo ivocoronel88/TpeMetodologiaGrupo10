@@ -2,29 +2,29 @@
 <h1>{$titulo}</h1>
 <div class="container">
 
-    <form>
+    <form action="insertSolicitud" method="post">
           <div class="form-group row">
                <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Nombre</label>
                <div class="col-sm-10">
-                    <input type="text" class="form-control form-control-lg" id="nombre" placeholder="Nombre">
+                    <input type="text" class="form-control form-control-lg" id="nombre" name="input_nombre" placeholder="Nombre">
                </div>
           </div>
           <div class="form-group row">
                <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Apellido</label>
                <div class="col-sm-10">
-                 <input type="text" class="form-control form-control-lg" id="apellido" placeholder="Apellido">
+                 <input type="text" class="form-control form-control-lg" id="apellido" name="input_apellido" placeholder="Apellido">
                </div>
           </div>
           <div class="form-group row">
             <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Dirección</label>
             <div class="col-sm-10">
-                 <input type="text" class="form-control form-control-lg" id="direccion" placeholder="Direccion">
+                 <input type="text" class="form-control form-control-lg" id="direccion" name="input_direccion" placeholder="Direccion">
              </div>
           </div>
           <div class="form-group row">
                <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Teléfono</label>
                <div class="col-sm-10">
-                    <input type="number" class="form-control form-control-lg" id="telefono" placeholder="Telefono">
+                    <input type="number" class="form-control form-control-lg" id="telefono" name="input_telefono" placeholder="Telefono">
                </div>
           </div>
           <div>
@@ -35,8 +35,7 @@
                     </select>
                </label>
           </div>
-</select>
-          <p><button type="button" class="btn btn-primary">Enviar</button></p>
+         <button type="submit" class="botonEstilo btnColor1">Enviar</button>
     </form>
     
 </div>
