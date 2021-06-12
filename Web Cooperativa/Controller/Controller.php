@@ -44,12 +44,12 @@ class Controller{
         $this->view->ShowCartonerosActivos($cartoneros);
     }
     function Domicilios(){
-        $domicilios = $this->modelCartonero->GetCartoneros();
+        $domicilios = $this->modelSolicitud->GetSolicitudes();
         $this->view->ShowDomicilios($domicilios);
     }
     function KilosMes(){
-        $KilosMes = $this->modelCartonero->GetCartoneros();
-        $this->view->ShowKilosMes( $KilosMes);
+        
+        $this->view->ShowAllUser();
     }
 
     function User(){

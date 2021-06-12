@@ -19,7 +19,7 @@
     $r->addRoute("Login", "GET", "UserController", "Login");
     $r->addRoute("CartonerosActivos", "GET", "Controller", "CartonerosActivos");
     $r->addRoute("Domicilios", "GET", "Controller", "Domicilios");
-    $r->addRoute("KilosMes", "GET", "Controller", "KiloMes");
+    $r->addRoute("KilosMes", "GET", "Controller", "KilosMes");
     
     $r->addRoute("insertSolicitud", "POST", "Controller", "InsertSolicitud");
     $r->addRoute("MaterialesyEntrega", "GET", "MaterialesController", "MaterialesyEntrega");

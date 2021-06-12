@@ -1,5 +1,6 @@
-{include file="ShowAllUser.tpl"}
-
+{include file="header.tpl"}
+{include file="encabezadoSecretaria.tpl"}
+<h1>Cartoneros activos</h1>
 <div class="container">
     <div class="row justify-content-start">
         <div style="width: 80%; float:left">
