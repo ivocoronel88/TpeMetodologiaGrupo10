@@ -21,6 +21,7 @@
     $r->addRoute("Domicilios", "GET", "Controller", "Domicilios");
     $r->addRoute("KilosMes", "GET", "Controller", "KilosMes");
     
+    $r->addRoute("insertPeso", "POST", "Controller", "InsertPeso");
     $r->addRoute("insertSolicitud", "POST", "Controller", "InsertSolicitud");
     $r->addRoute("MaterialesyEntrega", "GET", "MaterialesController", "MaterialesyEntrega");
     //ABM DE MATERIALEs

@@ -16,6 +16,7 @@ class MaterialModel{
         $sentencia->execute(array($material_id));
         return $sentencia->fetch(PDO::FETCH_OBJ);
     }
+    
     function InsertMaterial($tipo,$entrega){
         $sentencia = $this->db->prepare("INSERT INTO material(tipo,entrega) VALUES(?,?)");
         $sentencia->execute(array($tipo,$entrega));

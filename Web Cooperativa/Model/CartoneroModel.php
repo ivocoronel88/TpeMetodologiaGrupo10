@@ -12,7 +12,16 @@ class CartoneroModel{
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
 
-    
+    function GetCartonero($cartonero_dni){
+       $sentencia = $this->db->prepare("SELECT * FROM cartonero WHERE dni=? ");
+       $sentencia->execute([$cartonero_dni]);
+       return $sentencia->fetch(PDO::FETCH_OBJ);
+    }
+    function InsertPeso($peso,$cartonero_dni){
+        $sentencia = $this->db->prepare("UPDATE cartonero SET peso_materiales=? WHERE dni=? ");
+        $sentencia->execute(array($peso,$cartonero_dni));
+    }
+
     function InsertMateriales($email,$user,$clave_encriptada){
         $sentencia = $this->db->prepare("INSERT INTO usuario(email,user,password) VALUES(?,?,?)");
         $sentencia->execute(array($email,$user,$clave_encriptada));

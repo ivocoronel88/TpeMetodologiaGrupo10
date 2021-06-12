@@ -39,6 +39,14 @@ class Controller{
         $this->view->ShowCarteleraVirtual();
     }
 
+    function InsertPeso(){
+        if(isset($_POST['input_peso'])||isset($_POST['input_cartonero'])){
+            $cartonero = $this->modelCartonero->GetCartonero($_POST['input_cartonero']);
+            $peso= $_POST['input_peso'] + $cartonero->peso_materiales;
+            $this->modelCartonero->InsertPeso($peso,$_POST['input_cartonero']);
+        }
+        $this->CartonerosActivos();
+    }
     function CartonerosActivos(){
         $cartoneros = $this->modelCartonero->GetCartoneros();
         $this->view->ShowCartonerosActivos($cartoneros);
