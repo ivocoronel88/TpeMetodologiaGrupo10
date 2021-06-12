@@ -1,28 +1,29 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-06-11 09:30:06
+/* Smarty version 3.1.34-dev-7, created on 2021-06-12 08:41:25
   from 'C:\xampp\htdocs\TpeMetodologiaGrupo10\Web Cooperativa\templates\RetiroMateriales.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_60c310fe795057_38257418',
+  'unifunc' => 'content_60c45715c06dd7_30969502',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cc9fcd5f70441ab6063298692cd68213e0fffe99' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TpeMetodologiaGrupo10\\Web Cooperativa\\templates\\RetiroMateriales.tpl',
-      1 => 1623396449,
+      1 => 1623480082,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:header.tpl' => 1,
+    'file:mapa.tpl' => 1,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60c310fe795057_38257418 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60c45715c06dd7_30969502 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <h1><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
@@ -57,15 +58,20 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
           <div>
                <label for="opciones">Franja horaria
                     <select class="form-select" id="opciones" name="input_franja">
-                         <option value="primerHorario">9 a 12hs</option>
-                         <option value="segundoHorario">13 a 17hs</option>
+                         <option value="9 a 12hs">9 a 12hs</option>
+                         <option value="13 a 17hs">13 a 17hs</option>
                     </select>
                </label>
           </div>
-         <button type="submit" class="botonEstilo btnColor1">Enviar</button>
-    </form>
-    
+         
+          <button type="submit" class="botonEstilo btnColor1">Enviar</button>
+          </form>
+          
+          <?php $_smarty_tpl->_subTemplateRender("file:mapa.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 </div>
 <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-}
+?>
+
+<?php }
 }

@@ -30,8 +30,8 @@
           <div>
                <label for="opciones">Franja horaria
                     <select class="form-select" id="opciones" name="input_franja">
-                         <option value="primerHorario">9 a 12hs</option>
-                         <option value="segundoHorario">13 a 17hs</option>
+                         <option value="9 a 12hs">9 a 12hs</option>
+                         <option value="13 a 17hs">13 a 17hs</option>
                     </select>
                </label>
           </div>

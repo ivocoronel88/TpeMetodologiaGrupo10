@@ -1,31 +1,33 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-06-10 21:43:07
+/* Smarty version 3.1.34-dev-7, created on 2021-06-12 08:50:44
   from 'C:\xampp\htdocs\TpeMetodologiaGrupo10\Web Cooperativa\templates\ShowCartonerosActivos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_60c26b4b2747d5_92341186',
+  'unifunc' => 'content_60c4594400bb17_77527934',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c81f283183acb0f11cc8c4d15427882454445b0b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TpeMetodologiaGrupo10\\Web Cooperativa\\templates\\ShowCartonerosActivos.tpl',
-      1 => 1623353818,
+      1 => 1623480579,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:ShowAllUser.tpl' => 1,
+    'file:header.tpl' => 1,
+    'file:encabezadoSecretaria.tpl' => 1,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60c26b4b2747d5_92341186 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_subTemplateRender("file:ShowAllUser.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+function content_60c4594400bb17_77527934 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+$_smarty_tpl->_subTemplateRender("file:encabezadoSecretaria.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-
+<h1>Cartoneros activos</h1>
 <div class="container">
     <div class="row justify-content-start">
         <div style="width: 80%; float:left">
