@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-06-2021 a las 15:41:47
+-- Tiempo de generación: 12-06-2021 a las 22:02:56
 -- Versión del servidor: 10.4.14-MariaDB
--- Versión de PHP: 7.2.33
+-- Versión de PHP: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,16 +32,17 @@ CREATE TABLE `cartonero` (
   `nombre` varchar(200) NOT NULL,
   `dni` int(9) NOT NULL,
   `direccion` varchar(150) NOT NULL,
-  `vehiculo` varchar(150) NOT NULL
+  `vehiculo` varchar(150) NOT NULL,
+  `peso_materiales` int(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `cartonero`
 --
 
-INSERT INTO `cartonero` (`id`, `nombre`, `dni`, `direccion`, `vehiculo`) VALUES
-(2, 'Carlos Lopez', 30475882, 'Maipú 800', 'auto'),
-(3, 'Martina Rodriguez', 37834474, 'Garibaldi 300', 'camioneta');
+INSERT INTO `cartonero` (`id`, `nombre`, `dni`, `direccion`, `vehiculo`, `peso_materiales`) VALUES
+(2, 'Carlos Lopez', 30475882, 'Maipú 800', 'auto', NULL),
+(3, 'Martina Rodriguez', 37834474, 'Garibaldi 300', 'camioneta', NULL);
 
 -- --------------------------------------------------------
 
