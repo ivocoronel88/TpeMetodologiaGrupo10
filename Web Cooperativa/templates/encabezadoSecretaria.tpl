@@ -15,7 +15,7 @@
                     <td><a href="CartonerosActivos">Cartoneros activos</a></td>
                 </tr>
                 <tr>
-                    <td><a href="Domicilios">Domicilios</a></td>
+                    <td><a href="Domicilios">Domicilios a visitar</a></td>
                 </tr>
                 <tr>
                     <td><a href="KilosMes">Kilos vendidos este mes</a></td>

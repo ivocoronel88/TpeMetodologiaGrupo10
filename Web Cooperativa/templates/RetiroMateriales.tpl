@@ -11,7 +11,7 @@
         <div class="form-group row">
             <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg colorgreen">Nombre</label>
             <div class="col-sm-10">
-                 <input type="text" class="form-control form-control-lg" id="direccion" name="input_direccion" placeholder="Direccion">
+                 <input type="text" class="form-control form-control-lg" id="direccion" name="input_nombre" placeholder="Nombre">
              </div>
           </div>   
         

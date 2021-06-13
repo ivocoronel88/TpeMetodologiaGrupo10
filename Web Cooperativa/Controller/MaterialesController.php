@@ -26,7 +26,7 @@ class MaterialesController{
     }
     function InsertMaterial(){
         if(isset($_POST['input_material'])){
-            $this->modelMaterial->InsertMaterial($_POST['input_material'],$_POST['input_entrega']);
+            $this->modelMaterial->InsertMaterial($_POST['input_material'],$_POST['input_entrega'], $_POST['input_imagen']);
         }
         $this->MaterialesyEntrega();
     }
@@ -42,7 +42,7 @@ class MaterialesController{
     }
     function ModificarMaterial(){
         if(isset($_POST['input_material'])){
-            $this->modelMaterial->EditMaterial($_POST['material_id'],$_POST['input_material'],$_POST['input_entrega']);
+            $this->modelMaterial->EditMaterial($_POST['input_material'], $_POST['input_entrega'], $_POST['input_imagen'], $_POST['material_id']);
         }
         $this->MaterialesyEntrega();
     }

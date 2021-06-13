@@ -10,6 +10,7 @@
         <table class="table table-striped">
             <thead class="bg-success">
                 <tr>
+                    <th class="thtxt" scope="col"></th>
                     <th class="thtxt" scope="col">Materiales que se aceptan</th>
                     <th class="thtxt" scope="col">Formas de entrega</th>
                     {if $admin}
@@ -21,8 +22,8 @@
             <tbody>
                  {foreach from=$materiales item= materialito}
                     <tr>
+                        <td class="table-success" ><img src="img/{$materialito->imagen}"></td>
                         <td class="table-success">{$materialito->tipo}</td>
-                        
                         <td class="table-success">{$materialito->entrega}</td>
                         {if $admin}
                          <td class="table-success">
@@ -35,10 +36,6 @@
                 {/foreach}
             </tbody>
         </table>
-
-
-
-
 
         {if $admin}
             <div class="formsito">
@@ -53,7 +50,11 @@
                         <input class="form-control" id="entrega" name="input_entrega" aria-describedby="emailHelp">
                       
                     </div>
-                    
+                        <div class="form-group">
+                        <label for="title" class="form-label">Imagen</label>
+                        <input class="form-control" id="imagen" name="input_imagen" type="file" aria-describedby="emailHelp">
+                    </div>
+                   
                     <button type="submit" class="botonEstilo btnlog">Agregar</button>
                 </form>
             </div>

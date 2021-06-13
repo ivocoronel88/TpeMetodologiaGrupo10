@@ -12,12 +12,14 @@
                     <div class="form-group">
                         <label for="title">Entrega</label>
                         <input class="form-control" id="entrega" name="input_entrega"  value="{$material->entrega}">
-                      
                     </div>
-                    
+                        <div class="form-group">
+                        <label for="title" class="form-label">Imagen</label>
+                        <input class="form-control" id="imagen" name="input_imagen" type="file">
+                    </div>
+
                     <button type="submit" class="btn btn-primary">Modificar</button>
                 </form>
     </div>
-    
 
 {include file="footer.tpl"}

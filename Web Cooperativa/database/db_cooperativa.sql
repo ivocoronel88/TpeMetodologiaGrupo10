@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-06-2021 a las 22:02:56
--- Versión del servidor: 10.4.14-MariaDB
--- Versión de PHP: 7.4.10
+-- Tiempo de generación: 13-06-2021 a las 21:23:36
+-- Versión del servidor: 10.4.17-MariaDB
+-- Versión de PHP: 8.0.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -42,7 +42,7 @@ CREATE TABLE `cartonero` (
 
 INSERT INTO `cartonero` (`id`, `nombre`, `dni`, `direccion`, `vehiculo`, `peso_materiales`) VALUES
 (2, 'Carlos Lopez', 30475882, 'Maipú 800', 'auto', NULL),
-(3, 'Martina Rodriguez', 37834474, 'Garibaldi 300', 'camioneta', NULL);
+(3, 'Martina Rodriguez', 37834474, 'Garibaldi 300', 'camioneta', 67);
 
 -- --------------------------------------------------------
 
@@ -53,19 +53,20 @@ INSERT INTO `cartonero` (`id`, `nombre`, `dni`, `direccion`, `vehiculo`, `peso_m
 CREATE TABLE `material` (
   `id` int(11) NOT NULL,
   `tipo` varchar(255) NOT NULL,
-  `entrega` text NOT NULL
+  `entrega` text NOT NULL,
+  `imagen` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `material`
 --
 
-INSERT INTO `material` (`id`, `tipo`, `entrega`) VALUES
-(1, 'Botellas de Plástico PET 1: Sólo botellas plásticas transparentes y de color para bebidas, jugo y agua mineral. Identificados como PET 1.', 'Sin restos líquidos u otros materiales en su interior. No se reciben ecoladrillos. Retirar las tapas, disponer en forma separada, plástico específico PP5. Siempre aplastadas, en especial, botellas mayores a 1,5 litros y bidones de agua. Retirar etiquetas plásticas, se recomienda usar cuchillo o tijera para esta labor. Nota, es más fácil hacerlo una vez aplastada la botella. NO SE RECIBEN otros envases PET 1 como botellas de detergente, aceites, vinagre, empaques de pastelería, comida rápida, vasos plásticos y similares.'),
-(2, 'Carton: Envases de cartón liso como cajas de cereal, empaques de licores y cervezas, entre otros Cartulinas, cartón piedra. Cajas de cartón corrugado, empaques de productos.', 'Siempre desarma la caja, usa un cuchillo o tijera, revisa sus uniones, por lo general son muy fáciles de despegar. Con una punta puedes romper fácilmente cintas adhesivas para desarmarlas. No se reciben envases plastificados como de productos congelados o detergente en polvo. Tampoco cajas de huevo y embalajes similares. Revisa que los envases no contengan sobres, restos de comida, cereales o restos de embalajes.'),
-(3, 'Aluminio: Latas para bebidas, jugos o cerveza. ', 'Siempre aplastadas, sabias que puedes reducir hasta 8 veces su volumen. Aplastar con el pie, sobre una superficie antideslizante o compactador manual, nunca con las manos puedes sufrir un corte. Sin restos líquidos, dale un pequeño enjuague o déjalas escurrir en el lavaplatos por unos minutos. Evita introducir b'),
-(4, 'Papel: Diarios, Revistas, Hojas Impresas, Fotocopias y Hojas de Cuaderno.', 'Apilar en forma separada diarios, revistas y hojas impresas. Siempre estirados, evitar armar paquetes o hacer pelotas de papel. Sólo en el caso de hojas blancas trituradas entregar en una bolsa plástica en forma separada. No disponer papeles pequeños, sobres, hojas picadas o despuntes; hojas con tempera, pegamentos u otros elementos contaminantes. Cuadernos sin tapa ni espirales.'),
-(8, 'Botellas y frascos de vidrio. Envases de vidrio utilizados para bebidas, jugos, licores y alimentos.', 'SIN RESTOS LIQUIDOS!! O alimentos en su interior (mermeladas, grasas, vinagretas, entre otros). Se recomienda dar un pequeño enjuague y dejar escurrir volteados en el lavaplatos por unos minutos antes de su acopio. Importante, no mezclar con loza, cerámica, ventanas, espejos, vasos, frascos de perfume, estos materiales son contaminantes y deben ser tratados en forma separada.');
+INSERT INTO `material` (`id`, `tipo`, `entrega`, `imagen`) VALUES
+(1, '<b>Botellas de Plástico PET 1:</b> Sólo botellas plásticas transparentes y de color para bebidas, jugo y agua mineral. Identificados como PET 1.', 'Sin restos líquidos u otros materiales en su interior. No se reciben ecoladrillos. Retirar las tapas, disponer en forma separada, plástico específico PP5. Siempre aplastadas, en especial, botellas mayores a 1,5 litros y bidones de agua. Retirar etiquetas plásticas, se recomienda usar cuchillo o tijera para esta labor. Nota, es más fácil hacerlo una vez aplastada la botella. NO SE RECIBEN otros envases PET 1 como botellas de detergente, aceites, vinagre, empaques de pastelería, comida rápida, vasos plásticos y similares.', 'plastico.png'),
+(2, '<b>Carton:</b> Envases de cartón liso como cajas de cereal, empaques de licores y cervezas, entre otros Cartulinas, cartón piedra. Cajas de cartón corrugado, empaques de productos.', 'Siempre desarma la caja, usa un cuchillo o tijera, revisa sus uniones, por lo general son muy fáciles de despegar. Con una punta puedes romper fácilmente cintas adhesivas para desarmarlas. No se reciben envases plastificados como de productos congelados o detergente en polvo. Tampoco cajas de huevo y embalajes similares. Revisa que los envases no contengan sobres, restos de comida, cereales o restos de embalajes.', 'carton.png'),
+(3, '<b>Aluminio:</b> Latas para bebidas, jugos o cerveza. ', 'Siempre aplastadas, sabias que puedes reducir hasta 8 veces su volumen. Aplastar con el pie, sobre una superficie antideslizante o compactador manual, nunca con las manos puedes sufrir un corte. Sin restos líquidos, dale un pequeño enjuague o déjalas escurrir en el lavaplatos por unos minutos. Evita introducir b', 'aluminio.png'),
+(4, '<b>Papel:</b> Diarios, Revistas, Hojas Impresas, Fotocopias y Hojas de Cuaderno.', 'Apilar en forma separada diarios, revistas y hojas impresas. Siempre estirados, evitar armar paquetes o hacer pelotas de papel. Sólo en el caso de hojas blancas trituradas entregar en una bolsa plástica en forma separada. No disponer papeles pequeños, sobres, hojas picadas o despuntes; hojas con tempera, pegamentos u otros elementos contaminantes. Cuadernos sin tapa ni espirales.', 'papel.png'),
+(5, '<b>Botellas y frascos de vidrio:</b> Envases de vidrio utilizados para bebidas, jugos, licores y alimentos.', 'SIN RESTOS LIQUIDOS!! O alimentos en su interior (mermeladas, grasas, vinagretas, entre otros). Se recomienda dar un pequeño enjuague y dejar escurrir volteados en el lavaplatos por unos minutos antes de su acopio. Importante, no mezclar con loza, cerámica, ventanas, espejos, vasos, frascos de perfume, estos materiales son contaminantes y deben ser tratados en forma separada.', 'vidrio.png');
 
 -- --------------------------------------------------------
 
@@ -87,7 +88,8 @@ CREATE TABLE `solicitud` (
 --
 
 INSERT INTO `solicitud` (`id`, `nombre`, `apellido`, `direccion`, `telefono`, `franja`) VALUES
-(6, 'Cami', 'Lopez', 'Urquiza 365', 154321965, 'segundoHorario');
+(6, 'Cami', 'Lopez', 'Urquiza 365', 154321965, 'segundoHorario'),
+(7, 'Nicolas', 'Cañada', 'alberdi 661', 123456789, 'primerHorario');
 
 -- --------------------------------------------------------
 
@@ -154,13 +156,13 @@ ALTER TABLE `cartonero`
 -- AUTO_INCREMENT de la tabla `material`
 --
 ALTER TABLE `material`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `solicitud`
 --
 ALTER TABLE `solicitud`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`

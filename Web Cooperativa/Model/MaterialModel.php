@@ -17,17 +17,17 @@ class MaterialModel{
         return $sentencia->fetch(PDO::FETCH_OBJ);
     }
     
-    function InsertMaterial($tipo,$entrega){
-        $sentencia = $this->db->prepare("INSERT INTO material(tipo,entrega) VALUES(?,?)");
-        $sentencia->execute(array($tipo,$entrega));
+    function InsertMaterial($tipo,$entrega,$imagen){
+        $sentencia = $this->db->prepare("INSERT INTO material(tipo,entrega,imagen) VALUES(?,?,?)");
+        $sentencia->execute(array($tipo,$entrega,$imagen));
     }
     function DeleteMaterial($id){
         $sentencia = $this->db->prepare("DELETE FROM material WHERE id=?");
         $sentencia->execute(array($id));
     }
-    function EditMaterial($id,$tipo,$entrega){
-        $sentencia = $this->db->prepare("UPDATE material SET tipo=?, entrega=? WHERE id=?");
-        $sentencia->execute(array($tipo,$entrega,$id));
+    function EditMaterial($tipo,$entrega,$imagen,$id){
+        $sentencia = $this->db->prepare("UPDATE material SET tipo=?, entrega=?, imagen=? WHERE id=?");
+        $sentencia->execute(array($tipo,$entrega,$imagen,$id));
     }
     
 }
