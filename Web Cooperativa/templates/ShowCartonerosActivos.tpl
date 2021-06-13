@@ -22,7 +22,11 @@
                             <td class="table-success">{$cartonero->dni}</td>
                             <td class="table-success">{$cartonero->direccion}</td>
                             <td class="table-success">{$cartonero->vehiculo}</td>
-                            <td class="table-success">{$cartonero->peso_materiales} kg</td>
+                            {if $cartonero->peso_materiales eq NULL}
+                                <td class="table-success">No hay peso asignado</td>
+                            {else}
+                                <td class="table-success">{$cartonero->peso_materiales} kg</td>
+                            {/if}
                         </tr>
                     {/foreach}
                 </tbody>

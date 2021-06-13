@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-06-10 21:42:34
+/* Smarty version 3.1.34-dev-7, created on 2021-06-13 03:57:54
   from 'C:\xampp\htdocs\TpeMetodologiaGrupo10\Web Cooperativa\templates\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_60c26b2af337e7_92360660',
+  'unifunc' => 'content_60c566223d3985_20049446',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0dd5257d3d5a2c1edf7ff9c70bb099aeaf40ccc4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TpeMetodologiaGrupo10\\Web Cooperativa\\templates\\footer.tpl',
-      1 => 1623353818,
+      1 => 1623549420,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60c26b2af337e7_92360660 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60c566223d3985_20049446 (Smarty_Internal_Template $_smarty_tpl) {
 ?>                <!-- Optional JavaScript -->
                 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
                 <?php echo '<script'; ?>

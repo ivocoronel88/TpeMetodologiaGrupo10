@@ -22,16 +22,13 @@ class CartoneroModel{
         $sentencia->execute(array($peso,$cartonero_dni));
     }
 
-    function InsertMateriales($email,$user,$clave_encriptada){
-        $sentencia = $this->db->prepare("INSERT INTO usuario(email,user,password) VALUES(?,?,?)");
+    function InsertCartonero($email,$user,$clave_encriptada){
+        $sentencia = $this->db->prepare("INSERT INTO cartonero(email,user,password) VALUES(?,?,?)");
         $sentencia->execute(array($email,$user,$clave_encriptada));
     }
-    function DeleteMateriales($id_user){
-        $sentencia = $this->db->prepare("DELETE FROM usuario WHERE id=?");
-        $sentencia->execute(array($id_user));
+    function DeleteCartonero($id){
+        $sentencia = $this->db->prepare("DELETE FROM cartonero WHERE id=?");
+        $sentencia->execute(array($id));
     }
-    function EditMateriales($user_id,$admin){
-        $sentencia = $this->db->prepare("UPDATE usuario SET admin=? WHERE id=?");
-        $sentencia->execute(array($admin,$user_id));
-    }
+    
 }
