@@ -3,16 +3,183 @@ body{
    
     text-align: center;
 }
-.imagenes{
-  border: 0.2em solid #ddd;
-  padding: 0.09em;
-  width: 50%;
-  height: 50%;
+
+.container{
+  margin: 0% !important;
+  padding: 0% !important;
 }
+
+.navbar{
+  background-color: rgb(102, 204, 0) !important;
+  background: -webkit-linear-gradient(to right, rgb(102, 204, 0), green);   
+  background: linear-gradient(to right,  rgb(102, 204, 0), green);
+}
+
+.btnlog{
+  /*background-color: green !important;*/
+  background-image: linear-gradient(to right,rgb(102, 204, 0),rgb(0, 158, 0),rgb(102, 204, 0)) !important;
+  border: white !important;
+}
+
+.btnlog:hover{
+  color: rgb(2, 1, 1);
+}
+
+.pport{
+  color: white;
+  font-weight: bold;
+  font-size: 26px;
+  padding-top: 30px;
+  padding-left: 40px;
+  width: 45%;
+  text-shadow: 5px 5px 8px black;
+  -webkit-text-stroke: 1px black;
+}
+
+.navtitle{
+  color: white;
+}
+
+.imgnav{
+  height: 50px;
+  width: 50px;
+  margin-right: 1%;
+}
+
+.title{
+  color: white;
+  font-size: 70px;
+  text-shadow: 5px 5px 5px black;
+  padding-top: 40px;
+  padding-left: 40px;
+  margin-right: max-content;
+}
+
+.titlemye{
+  color: white;
+  font-size: 70px;
+  text-shadow: 5px 5px 5px black;
+  padding-top: 40px;
+  padding-left: 35%;
+}
+
+
+.subtitlehome{
+  color: white;
+  font-size: 40px;
+  text-shadow: 5px 5px 5px black;
+  padding-top: 25px;
+  padding-left: 40px;
+  margin-left: 70%;
+}
+
+.subtitledesc{
+  width: max-content;
+  margin-top: 10px;
+  padding-left: 50%;
+  font-size: 40px;
+  color: green;
+  text-align: center;
+}
+
+.table{
+  margin-left: 33.5% !important;
+  margin: 30px;
+  margin-bottom: 30px !important;
+}
+
+.tabloide{
+  margin: 0% !important;
+  margin-left: 15% !important;
+  margin-bottom: 40px !important;
+  width: 70% !important;
+}
+
+.portada{
+  margin: 0% !important;
+  padding: 0% !important;
+  width: 166.9%;
+  height: 600px !important;
+  background-image: url("https://www.girsa.es/wp-content/uploads/2021/01/plastico-reciclar.jpg");
+}
+
+.portmye{
+  margin: 0% !important;
+  padding: 0% !important;
+  height: 400px !important;
+  overflow:hidden !important;
+  background-image: url("https://cubosfueramadrid.es/wp-content/uploads/2021/02/pedir-un-cubo-de-basura.jpg");
+}
+
+.portsoli{
+  margin: 0% !important;
+  padding: 0% !important;
+  height: 270px !important;
+  overflow:hidden !important;
+  background-image: url("https://www.expoknews.com/wp-content/uploads/2018/03/Canada%CC%81-va-por-el-reciclaje-de-pla%CC%81stico-en-el-mundo.jpg");
+}
+
+.btnmgm{
+  color: white;
+  font-size: 20px;
+}
+
+.btnmm{
+  margin: 4px !important;
+}
+
+.thtxt{
+  color: white !important;
+  font-size: 20px !important;
+}
+
+.hiuser{
+  color: darkgreen;
+  margin-top: 8px;
+}
+
+.formsoli{
+  margin: 3%;
+  margin-left: 15%;
+  width: 70%;
+}
+
+.horita{
+  margin-top: 30px !important;
+  margin-bottom: 20px !important;
+}
+
+.colorgreen{
+  color: green !important;
+  font-size: 30px !important;
+  font-style: bold;
+}
+
+.row{
+  margin-top: 30px !important;
+}
+
+.txthome{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  margin-right: 5px;
+  font-size: 25px;
+  width: 166% !important;
+  color: darkgreen;
+}
+
+.imagenes{
+  padding: 0% !important;
+  margin: 0% !important;
+  width: auto;
+  height: 600px !important;
+}
+
 .nav-bk2{
   background: #23074d; 
-  background: -webkit-linear-gradient(to right, #3aa3aa, #3d127e);   
-  background: linear-gradient(to right, #3aa3aa, #3d127e);
+  background: -webkit-linear-gradient(to right, green, rgb(102, 204, 0));   
+  background: linear-gradient(to right, green, rgb(102, 204, 0));
 }
 #map {
   height: 100%;
@@ -22,24 +189,37 @@ body{
   font-weight: 800;
 }
 
-p{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 0.9em;
-  color: rgb(27, 24, 37);
-  text-align: center;
+.formsito{
+  margin-left: 50%;
+  width: 70%;
 }
+
+footer{
+  background-color: green !important;
+  width: auto;
+}
+
+.footer2{
+  background-color: green !important;
+  width: 166.9%;
+}
+
+.foottitle{
+  color: white;
+  text-align: center;
+  padding-top: 75px;
+  height: 200px;
+  background-color: green !important;
+  font-size: 40px;
+  margin: 0;
+}
+
 label{
     color: rgb(0, 0, 0);
     font-size: 1.2em;
 }
 header{
   text-align: center;
-}
-h1{
-    color: #13131a;
-    text-decoration-line: underline;
-    text-align: center;
-    text-transform: inherit;
 }
   
 h3{
@@ -50,6 +230,12 @@ h5{
     color: rgb(37, 43, 46);
     text-decoration-line: underline;
   }
+
+.formxd{
+  margin: 40px;
+  margin-left: 25%;
+  width: 50%;
+}
 
 .pagination{
   background-color: rgb(255, 255, 255);

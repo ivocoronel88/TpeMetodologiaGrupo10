@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-06-12 08:24:51
+/* Smarty version 3.1.34-dev-7, created on 2021-06-13 04:33:15
   from 'C:\xampp\htdocs\TpeMetodologiaGrupo10\Web Cooperativa\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_60c45333191786_43467866',
+  'unifunc' => 'content_60c56e6b18d5b5_63884620',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7034983612e5f39215fcbbc8882245de13a98f9d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TpeMetodologiaGrupo10\\Web Cooperativa\\templates\\header.tpl',
-      1 => 1623479073,
+      1 => 1623551497,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60c45333191786_43467866 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60c56e6b18d5b5_63884620 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -58,18 +58,17 @@ function content_60c45333191786_43467866 (Smarty_Internal_Template $_smarty_tpl)
 
 <body>
     <!-- BARRA DE NAVEGACIÓn -->
-    <nav class="navbar navbar-expand-md bg-light navbar-light">
+    <nav class="navbar navbar-expand-md bg-green navbar-light">
 
-        <a class="navbar-brand" href="home">Cooperativa Cartoneros</a>
+        <img class="imgnav" src="img\58568a5b4f6ae202fedf2713.png">
+        <a class="navbar-brand" href="home"><h1 class="navtitle">Recoop</h1></a>
         <div class="container">
 
                 <?php if ($_smarty_tpl->tpl_vars['userLogin']->value) {?>
-                    <h4><?php echo $_smarty_tpl->tpl_vars['userLogin']->value;?>
-, Te damos la bienvenida</h4>
-                <?php } else { ?> 
-                <h4>Invitado, le damos la bienvenida</h4>
-
+                    <h4 class="hiuser">Bienvenido, <?php echo $_smarty_tpl->tpl_vars['userLogin']->value;?>
+</h4>
                 <?php }?>
+
         </div>
         <!-- Navbar links -->
         <div class="container d-flex flex-row-reverse">
@@ -80,7 +79,7 @@ function content_60c45333191786_43467866 (Smarty_Internal_Template $_smarty_tpl)
             </li>
         <?php } else { ?>
             <li class="nav-item">
-                <button type="button" class="btn btn-primary"> <a href="Login" class="text-white show-decoration-none"> Ingresar</a></button>
+                <button type="button" class="botonEstilo btnlog"> <a href="Login" class="text-white show-decoration-none"> Ingresar</a></button>
             </li>
         <?php }?>
 

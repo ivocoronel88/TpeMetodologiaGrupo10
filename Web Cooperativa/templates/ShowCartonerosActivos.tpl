@@ -1,18 +1,16 @@
 {include file="header.tpl"}
 {include file="encabezadoSecretaria.tpl"}
-<h1>Cartoneros activos</h1>
+<h1 class="colorgreen">Cartoneros activos</h1>
 <div class="container">
-    <div class="row justify-content-start">
-
-        <div style="width: 80%; float:left">
-            <table class="table table-striped">
-                <thead class="bg-success">
+               <table class="table table-hover">
+            <thead class="bg-success">
                     <tr>
                         <th scope="col">Nombre</th>
                         <th scope="col">Dni</th>
                         <th scope="col">Dirección</th>
                         <th scope="col">Vehiculo</th>
                         <th scope="col">Peso de Materiales</th>
+                        <th scope="col">Borrar y editar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -27,29 +25,35 @@
                             {else}
                                 <td class="table-success">{$cartonero->peso_materiales} kg</td>
                             {/if}
+                            <td class="table-success">
+                            <button type="button" class="btn btn-danger btnmm"><h3 class="btnmgm">Borrar</h3></a></button> 
+                            <button type="button" class="btn btn-primary btnmm"><h3 class="btnmgm">Editar</h3></a></button>
+                            </td>
                         </tr>
                     {/foreach}
                 </tbody>
             </table>
         </div>
-        <div style="width: 20%; float:right">
-            <p><button type="button" class="btn btn-primary">Agregar Cartonero</button></p>
-            <p><button type="button" class="btn btn-primary">Editar Cartonero</button></p>
-            <p><button type="button" class="btn btn-primary">Borrar Cartonero</button></p>
-
-        </div>
+        
     </div>
-    <form action="insertPeso" method="post">
-        <label for="opciones">Cartonero
-            <select class="form-select" id="opciones" name="input_cartonero">
-            {foreach from=$cartoneros item= cartonero}
-                <option value={$cartonero->dni}>{$cartonero->nombre}</option>           
-            {/foreach}
-            </select>
-        </label>
-        <input type="number" name="input_peso" placeholder="Peso de la balanza">
-        <button type="submit" class="botonEstilo btnColor1">Enviar</button>
-    </form>
+    <div class="formsito">
+    <button type="submit" class="botonEstilo btnlog">Agregar cartonero</button>
+    </div>
+    
+    <div class="formsoli">
+        <form action="insertPeso" method="post">
+            <label for="opciones">
+                <p class="colorgreen">Cartonero</p>
+                <select  id="opciones" name="input_cartonero">
+                    {foreach from=$cartoneros item= cartonero}
+                        <option value={$cartonero->dni}>{$cartonero->nombre}</option>           
+                    {/foreach}
+                </select>
+            </label>
+            <input type="number" name="input_peso" placeholder="Peso de la balanza">
+            <button type="submit" class="botonEstilo btnlog">Enviar</button>
+        </form>
+    </div>
 </div>
 
 {include file="footer.tpl"}

@@ -1,4 +1,7 @@
-  <h1>{$titulo}</h1>
+
+<div class="portmye">
+  <h1 class="titlemye">{$titulo}</h1>
+</div>
 
 <div class="container">
                <table class="table table-hover">

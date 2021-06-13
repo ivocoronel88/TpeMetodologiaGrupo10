@@ -26,17 +26,16 @@
 
 <body>
     <!-- BARRA DE NAVEGACIÓn -->
-    <nav class="navbar navbar-expand-md bg-light navbar-light">
+    <nav class="navbar navbar-expand-md bg-green navbar-light">
 
-        <a class="navbar-brand" href="home">Cooperativa Cartoneros</a>
+        <img class="imgnav" src="img\58568a5b4f6ae202fedf2713.png">
+        <a class="navbar-brand" href="home"><h1 class="navtitle">Recoop</h1></a>
         <div class="container">
 
                 {if $userLogin}
-                    <h4>{$userLogin}, Te damos la bienvenida</h4>
-                {else} 
-                <h4>Invitado, le damos la bienvenida</h4>
-
+                    <h4 class="hiuser">Bienvenido, {$userLogin}</h4>
                 {/if}
+
         </div>
         <!-- Navbar links -->
         <div class="container d-flex flex-row-reverse">
@@ -47,7 +46,7 @@
             </li>
         {else}
             <li class="nav-item">
-                <button type="button" class="btn btn-primary"> <a href="Login" class="text-white show-decoration-none"> Ingresar</a></button>
+                <button type="button" class="botonEstilo btnlog"> <a href="Login" class="text-white show-decoration-none"> Ingresar</a></button>
             </li>
         {/if}
 

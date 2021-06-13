@@ -1,14 +1,19 @@
 {include file="header.tpl"}
 
-<h1>{$titulo}</h1>
+
+
+<div class="portmye">
+    <h1 class="titlemye">{$titulo}</h1>
+</div>
+
 <div class="container">
         <table class="table table-striped">
             <thead class="bg-success">
                 <tr>
-                    <th scope="col">Materiales que se aceptan</th>
-                    <th scope="col">Formas de entrega</th>
+                    <th class="thtxt" scope="col">Materiales que se aceptan</th>
+                    <th class="thtxt" scope="col">Formas de entrega</th>
                     {if $admin}
-                     <th scope="col">Borrar y editar</th>
+                     <th class="thtxt" scope="col">Borrar y editar</th>
                     {/if}
 
                 </tr>
@@ -21,8 +26,8 @@
                         <td class="table-success">{$materialito->entrega}</td>
                         {if $admin}
                          <td class="table-success">
-                            <button type="button" class="btn btn-success"><a href="deleteMaterial/{$materialito->id} ">Borrar</a></button> 
-                            <button type="button" class="btn btn-info"><a href="editMaterial/{$materialito->id}">Editar</a></button>
+                            <button type="button" class="btn btn-danger btnmm"><a href="deleteMaterial/{$materialito->id} "><h3 class="btnmgm">Borrar</h3></a></button> 
+                            <button type="button" class="btn btn-primary btnmm"><a href="editMaterial/{$materialito->id}"><h3 class="btnmgm">Editar</h3></a></button>
                         </td>
                         {/if}
                         
@@ -36,24 +41,23 @@
 
 
         {if $admin}
-            <div class="container">
-                <form action="insertMaterial" method="post" >
+            <div class="formsito">
+                <form class="mb-5" action="insertMaterial" method="post" >
                     <div class="form-group">
-                        <label for="title">Material</label>
+                        <label for="title" class="form-label">Material</label>
                         <input class="form-control" id="mterial" name="input_material" aria-describedby="emailHelp">
                       
                     </div>
                     <div class="form-group">
-                        <label for="title">Entrega</label>
+                        <label for="title" class="form-label">Entrega</label>
                         <input class="form-control" id="entrega" name="input_entrega" aria-describedby="emailHelp">
                       
                     </div>
                     
-                    <button type="submit" class="botonEstilo btnColor1">Agregar</button>
+                    <button type="submit" class="botonEstilo btnlog">Agregar</button>
                 </form>
-
-        
-{/if}
+            </div>
+        {/if}
 
                 
 </div>
