@@ -1,5 +1,12 @@
 {include file="header.tpl"}
-
+<script src="./js/form.js"></script>
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+    <link rel="stylesheet" type="text/css" href="css/map.css">
 <div class="portsoli">
 
     <h1 class="titlemye">{$titulo}</h1>
@@ -7,25 +14,25 @@
 
 <div class="formsoli">
 
-    <form action="insertSolicitud" method="post">
+    <form action="insertSolicitud" method="post" id="form">
         <div class="form-group row">
             <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg colorgreen">Nombre</label>
             <div class="col-sm-10">
-                 <input type="text" class="form-control form-control-lg" id="direccion" name="input_nombre" placeholder="Nombre">
+                 <input id="nombre" type="text" class="form-control form-control-lg" id="direccion" name="input_nombre" placeholder="Nombre">
              </div>
           </div>   
         
         <div class="form-group row">
             <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg colorgreen">Apellido</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control form-control-lg" id="apellido" name="input_apellido"
+                <input type="text" id="apellido" class="form-control form-control-lg" id="apellido" name="input_apellido"
                     placeholder="Apellido">
             </div>
         </div>
         <div class="form-group row">
             <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg colorgreen">Dirección</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control form-control-lg" id="direccion" name="input_direccion"
+                <input id="direccion" type="text" class="form-control form-control-lg" id="direccion" name="input_direccion"
                     placeholder="Direccion">
             </div>
         </div>
@@ -45,8 +52,10 @@
                 </select>
             </label>
         </div>
-        <button type="submit" class="botonEstilo btnlog">Enviar</button>
+        <button id="btn_enviar_submit" type="submit" class="botonEstilo btnlog">Enviar</button>
     </form>
-  {include file="mapa.tpl"}
+<div id = 'map'>
+
+</div>
 </div>
 {include file="footer.tpl"}
