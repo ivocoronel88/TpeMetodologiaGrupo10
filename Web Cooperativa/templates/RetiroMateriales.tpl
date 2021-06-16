@@ -52,10 +52,10 @@
                 </select>
             </label>
         </div>
-        <button id="btn_enviar_submit" type="submit" class="botonEstilo btnlog">Enviar</button>
+        <label for="colFormLabelLg" class="labelformap col-sm-2 col-form-label col-form-label-lg colorgreen">Su ubicacion</label>
+        <div id = 'map'>
+        </div>
+        <button id="btn_enviar_submit" type="submit" class="botonEstilo btnlog">Enviar Datos</button>
     </form>
-<div id = 'map'>
-
-</div>
 </div>
 {include file="footer.tpl"}
