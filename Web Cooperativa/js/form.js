@@ -37,8 +37,6 @@ document.addEventListener('DOMContentLoaded', () =>{
     function success(pos) {
         let crd = pos.coords;
         let point = L.marker([crd.latitude, crd.longitude]).addTo(map);
-        
-        //console.log(point);
         KMTOTAL = calculateKm(point);
     };
     function calculateKm(from){
@@ -61,43 +59,16 @@ document.addEventListener('DOMContentLoaded', () =>{
         if(KMTOTAL> 6){
             let cuerpo = document.querySelector('.formsoli');
             let temp = cuerpo.innerHTML;
-            cuerpo.innerHTML = "<p>los cartoneros no pueden retirar materiales a mas de 6km del centro de acopio. Puede ver si hay ciudadanos dispuestos a llevar sus materiales o postularse para llevar lo de otros en su misma condicion en la seccion de Cartelera Virtual</p>";
+            cuerpo.innerHTML = "<p class='txthome'>los cartoneros no pueden retirar materiales a mas de 6km del centro de acopio. Puede ver si hay ciudadanos dispuestos a llevar sus materiales o postularse para llevar lo de otros en su misma condicion en la seccion de Cartelera Virtual</p>";
             
             
             setTimeout(() => {
                location.reload();
-            }, 5000);   
+            }, 10000);   
         }else{
             form.submit();
-            // qcyo
         }
 
     })
 
 });
-
-
-
-
-
-  
-        /*
-        let campos = {
-            'nombre' : document.querySelector('#nombre').value,
-            'apellido' : document.querySelector('#apellido').value,
-            'direccion' : document.querySelector('#direccion').value,
-            'telefono' : document.querySelector('#telefono').value,
-            'horario' : document.querySelector("#opciones").value
-            }
-        
-        let errors = {};
-        for (const key in campos) {
-            if (Object.hasOwnProperty.call(campos, key)) {
-                if(campos[key] == ""){
-                    errors[key] = `El valor ${key} esta vacio`
-                }
-            }
-        }
-        */
-        //console.log(campos);
-        
