@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         if(KMTOTAL> 6){
             let cuerpo = document.querySelector('.formsoli');
             let temp = cuerpo.innerHTML;
-            cuerpo.innerHTML = "<p class='txthome'>los cartoneros no pueden retirar materiales a mas de 6km del centro de acopio. Puede ver si hay ciudadanos dispuestos a llevar sus materiales o postularse para llevar lo de otros en su misma condicion en la seccion de Cartelera Virtual</p>";
+            cuerpo.innerHTML = "<p class='txterror'>los cartoneros no pueden retirar materiales a mas de 6km del centro de acopio. Puede ver si hay ciudadanos dispuestos a llevar sus materiales o postularse para llevar lo de otros en su misma condicion en la seccion de Cartelera Virtual</p>";
             
             
             setTimeout(() => {

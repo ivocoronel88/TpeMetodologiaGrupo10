@@ -169,6 +169,15 @@ body{
   color: darkgreen;
 }
 
+.txterror{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  font-size: 25px;
+  width: 95% !important;
+  color: darkgreen;
+}
+
 .imagenes{
   padding: 0% !important;
   margin: 0% !important;
