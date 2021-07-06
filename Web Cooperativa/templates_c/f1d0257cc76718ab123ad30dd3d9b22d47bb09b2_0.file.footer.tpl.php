@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-06-12 03:50:25
+/* Smarty version 3.1.34-dev-7, created on 2021-07-06 23:00:27
   from 'C:\xampp\htdocs\meto\templates\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_60c412e19a55a0_63089114',
+  'unifunc' => 'content_60e4c46b14caf6_67003329',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f1d0257cc76718ab123ad30dd3d9b22d47bb09b2' => 
     array (
       0 => 'C:\\xampp\\htdocs\\meto\\templates\\footer.tpl',
-      1 => 1623462624,
+      1 => 1625605224,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60c412e19a55a0_63089114 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60e4c46b14caf6_67003329 (Smarty_Internal_Template $_smarty_tpl) {
 ?>                    <?php if ($_smarty_tpl->tpl_vars['titulo']->value == 'Materiales y entrega' && $_smarty_tpl->tpl_vars['userLogin']->value) {?>
                     <footer class="footer2">
+                    <?php } else { ?>
+                        <footer>
                     <?php }?>
-                <footer>
                     <h1 class="foottitle">© 2021 Grupo 10 </h1>
                 </footer>
                 

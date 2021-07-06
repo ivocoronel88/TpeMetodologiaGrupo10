@@ -57,7 +57,7 @@ class View{
         $this->smarty->display('templates/ShowEdicionMaterial.tpl'); 
     }
     function mostrarEditarCartonero($cartonero,$cartoneros){
-        $this->smarty->assign('titulo',"Edicion");
+        $this->smarty->assign('titulo',"Edicion Cartonero");
         $this->smarty->assign('cartonero_s',$cartonero);
         $this->smarty->assign('cartoneros',$cartoneros);
         $this->smarty->display('templates/ShowEdicionCartonero.tpl'); 

@@ -1,7 +1,7 @@
 {include file="header.tpl"}
 {include file="encabezadoSecretaria.tpl"}
-<h1>Domicilios</h1>
 <div class="container">
+<h1 class="colorgreen h1domi">Domicilios</h1>
         <table class="table table-striped">
             <thead class="bg-success">
                 <tr>

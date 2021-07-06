@@ -1,7 +1,8 @@
                     {if $titulo eq 'Materiales y entrega' and $userLogin}
                     <footer class="footer2">
+                    {else}
+                        <footer>
                     {/if}
-                <footer>
                     <h1 class="foottitle">© 2021 Grupo 10 </h1>
                 </footer>
                 

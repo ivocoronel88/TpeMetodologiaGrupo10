@@ -1,7 +1,8 @@
 {include file="header.tpl"}
 {include file="encabezadoSecretaria.tpl"}
-<h1 class="colorgreen">Cartoneros activos</h1>
+
 <div class="container">
+<h1 class="colorgreen h1cartonero">Cartoneros activos</h1>
     <table class="table table-hover">
         <thead class="bg-success">
             <tr>
@@ -34,12 +35,11 @@
         </tbody>
     </table>
 
-
-    <div class="formsito">
-        <button type="button" class="botonEstilo btnlog" data-toggle="modal" data-target="#myModal3">Agregar
-            cartonero</button>
+    <div class="addc">
+    <button type="button" class="botonEstilo btnlog" data-toggle="modal" data-target="#myModal3">Agregar Cartonero</button>
     </div>
-    <div class="formsoli">
+
+    <div class="formcartonero">
         <form action="insertPeso" method="post">
             <label for="opciones">
                 <p class="colorgreen">Cartonero</p>
@@ -95,7 +95,22 @@
 
     </div>
 
-
-
 </div>
+
+<div class="none">
+<form action="insertPeso" method="post">
+    <label for="opciones">
+        <p class="colorgreen">Cartonero</p>
+        <select  id="opciones" name="input_cartonero">
+            {foreach from=$cartoneros item= cartonero}
+                <option value={$cartonero->dni}>{$cartonero->nombre}</option>           
+            {/foreach}
+        </select>
+    </label>
+    <input type="number" name="input_peso" placeholder="Peso de la balanza">
+    <button type="submit" class="botonEstilo btnlog">Enviar</button>
+</form>
+</div>
+</div>
+
 {include file="footer.tpl"}

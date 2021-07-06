@@ -3,10 +3,10 @@
 <div class="container">
     <div class="col-9">
      
-        <h1 class="colorgreen">Cartoneros activos</h1>
-                <div class="container">
-               <table class="table table-hover">
-            <thead class="bg-success">
+    <div class="container">
+    <h1 class="colorgreen h1carrr">Cartoneros activos</h1>
+            <table class="table table-hover tablita">
+                <thead class="bg-success">
                     <tr>
                         <th scope="col">Nombre</th>
                         <th scope="col">Dni</th>
@@ -39,10 +39,10 @@
         </div>
     </div>
     <div>
-    <h4 class="colorgreen">Editar cartonero</h4>
-</div>
+    </div>
+      <h4 class="colorgreen h1edit">Editar cartonero</h4>
       <!-- Modal Cuerpo -->
-      <div class="modal-body">
+      <div class="modal-body formsito">
       <form action="ModificarCartonero" method="POST" enctype="multipart/form-data">
           <!--REVISAR FORM ACTION-->
           <div class="form-group">
@@ -64,15 +64,11 @@
               <label for="calificacion">Vehículo:</label>
               <input type="text" class="form-control" id="vehiculo" name="edit_vehiculo" value={$cartonero_s->vehiculo}>
           </div>
-          <button type="submit" class="btn btn-warning">Editar</button>
+          <button type="submit" class="botonEstilo btnlog">Editar</button>
       </form>
   </div>
 
-    <div class="formsito">
-    <button type="submit" class="botonEstilo btnlog">Agregar cartonero</button>
-    </div>
-
-    <div class="formsoli">
+    <div class="none">
         <form action="insertPeso" method="post">
             <label for="opciones">
                 <p class="colorgreen">Cartonero</p>
@@ -87,4 +83,5 @@
         </form>
     </div>
 </div>
+
 {include file="footer.tpl"}

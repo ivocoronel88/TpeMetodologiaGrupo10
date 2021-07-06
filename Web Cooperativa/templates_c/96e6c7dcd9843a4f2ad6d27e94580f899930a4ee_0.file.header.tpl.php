@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-06-11 23:30:44
+/* Smarty version 3.1.34-dev-7, created on 2021-07-06 22:25:40
   from 'C:\xampp\htdocs\meto\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_60c3d604b3e027_07143225',
+  'unifunc' => 'content_60e4bc4477b143_62963244',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '96e6c7dcd9843a4f2ad6d27e94580f899930a4ee' => 
     array (
       0 => 'C:\\xampp\\htdocs\\meto\\templates\\header.tpl',
-      1 => 1623447043,
+      1 => 1623866895,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60c3d604b3e027_07143225 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60e4bc4477b143_62963244 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
   <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Boceto Home</title> 
+  <title>Recoop Cooperativa de Reciclaje</title> 
   <base href="<?php echo BASE_URL;?>
 ">
+  <link rel="shortcut icon" href="img\58568a5b4f6ae202fedf2713.png">
   <link rel="stylesheet" type="text/css" href="css/estilo.css">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
-
   </head>
 
 <body>
