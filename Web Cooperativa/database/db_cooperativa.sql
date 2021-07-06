@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-06-2021 a las 21:23:36
--- Versión del servidor: 10.4.17-MariaDB
--- Versión de PHP: 8.0.2
+-- Tiempo de generación: 06-07-2021 a las 21:37:14
+-- Versión del servidor: 10.4.14-MariaDB
+-- Versión de PHP: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -42,7 +42,9 @@ CREATE TABLE `cartonero` (
 
 INSERT INTO `cartonero` (`id`, `nombre`, `dni`, `direccion`, `vehiculo`, `peso_materiales`) VALUES
 (2, 'Carlos Lopez', 30475882, 'Maipú 800', 'auto', NULL),
-(3, 'Martina Rodriguez', 37834474, 'Garibaldi 300', 'camioneta', 67);
+(3, 'Martina Rodriguez', 37834474, 'Garibaldi 300', 'camioneta', 67),
+(6, 'pepe', 125, 'Moreno 21345', 'triciclo con rueditas', NULL),
+(7, 'Geralt', 1, 'Rivia', 'Sardinilla', NULL);
 
 -- --------------------------------------------------------
 
@@ -66,7 +68,8 @@ INSERT INTO `material` (`id`, `tipo`, `entrega`, `imagen`) VALUES
 (2, '<b>Carton:</b> Envases de cartón liso como cajas de cereal, empaques de licores y cervezas, entre otros Cartulinas, cartón piedra. Cajas de cartón corrugado, empaques de productos.', 'Siempre desarma la caja, usa un cuchillo o tijera, revisa sus uniones, por lo general son muy fáciles de despegar. Con una punta puedes romper fácilmente cintas adhesivas para desarmarlas. No se reciben envases plastificados como de productos congelados o detergente en polvo. Tampoco cajas de huevo y embalajes similares. Revisa que los envases no contengan sobres, restos de comida, cereales o restos de embalajes.', 'carton.png'),
 (3, '<b>Aluminio:</b> Latas para bebidas, jugos o cerveza. ', 'Siempre aplastadas, sabias que puedes reducir hasta 8 veces su volumen. Aplastar con el pie, sobre una superficie antideslizante o compactador manual, nunca con las manos puedes sufrir un corte. Sin restos líquidos, dale un pequeño enjuague o déjalas escurrir en el lavaplatos por unos minutos. Evita introducir b', 'aluminio.png'),
 (4, '<b>Papel:</b> Diarios, Revistas, Hojas Impresas, Fotocopias y Hojas de Cuaderno.', 'Apilar en forma separada diarios, revistas y hojas impresas. Siempre estirados, evitar armar paquetes o hacer pelotas de papel. Sólo en el caso de hojas blancas trituradas entregar en una bolsa plástica en forma separada. No disponer papeles pequeños, sobres, hojas picadas o despuntes; hojas con tempera, pegamentos u otros elementos contaminantes. Cuadernos sin tapa ni espirales.', 'papel.png'),
-(5, '<b>Botellas y frascos de vidrio:</b> Envases de vidrio utilizados para bebidas, jugos, licores y alimentos.', 'SIN RESTOS LIQUIDOS!! O alimentos en su interior (mermeladas, grasas, vinagretas, entre otros). Se recomienda dar un pequeño enjuague y dejar escurrir volteados en el lavaplatos por unos minutos antes de su acopio. Importante, no mezclar con loza, cerámica, ventanas, espejos, vasos, frascos de perfume, estos materiales son contaminantes y deben ser tratados en forma separada.', 'vidrio.png');
+(5, '<b>Botellas y frascos de vidrio:</b> Envases de vidrio utilizados para bebidas, jugos, licores y alimentos.', 'SIN RESTOS LIQUIDOS!! O alimentos en su interior (mermeladas, grasas, vinagretas, entre otros). Se recomienda dar un pequeño enjuague y dejar escurrir volteados en el lavaplatos por unos minutos antes de su acopio. Importante, no mezclar con loza, cerámica, ventanas, espejos, vasos, frascos de perfume, estos materiales son contaminantes y deben ser tratados en forma separada.', 'vidrio.png'),
+(11, '', '', '');
 
 -- --------------------------------------------------------
 
@@ -150,13 +153,13 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `cartonero`
 --
 ALTER TABLE `cartonero`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `material`
 --
 ALTER TABLE `material`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `solicitud`

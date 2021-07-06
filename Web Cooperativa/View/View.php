@@ -56,6 +56,12 @@ class View{
         $this->smarty->assign('material',$material);
         $this->smarty->display('templates/ShowEdicionMaterial.tpl'); 
     }
+    function mostrarEditarCartonero($cartonero,$cartoneros){
+        $this->smarty->assign('titulo',"Edicion");
+        $this->smarty->assign('cartonero_s',$cartonero);
+        $this->smarty->assign('cartoneros',$cartoneros);
+        $this->smarty->display('templates/ShowEdicionCartonero.tpl'); 
+    }
     function ShowUserLoc(){
         header("Location: ".BASE_URL.'user');
     }

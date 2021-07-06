@@ -18,6 +18,10 @@
     $r->addRoute("CarteleraVirtual", "GET", "Controller", "CarteleraVirtual");
     $r->addRoute("Login", "GET", "UserController", "Login");
     $r->addRoute("CartonerosActivos", "GET", "Controller", "CartonerosActivos");
+    $r->addRoute("EditarCartonero/:ID", "GET", "Controller", "EditarCartonero");
+    $r->addRoute("ModificarCartonero", "POST", "Controller", "ModificarCartonero");
+    $r->addRoute("InsertarCartonero", "POST", "Controller", "InsertarCartonero");
+    $r->addRoute("DeleteCartonero/:ID", "GET", "Controller", "DeleteCartonero");
     $r->addRoute("Domicilios", "GET", "Controller", "Domicilios");
     $r->addRoute("KilosMes", "GET", "Controller", "KilosMes");
     

@@ -51,6 +51,32 @@ class Controller{
         $cartoneros = $this->modelCartonero->GetCartoneros();
         $this->view->ShowCartonerosActivos($cartoneros);
     }
+    function InsertarCartonero(){
+        if(isset($_POST['input_nombre'])||isset($_POST['input_dni'])||isset($_POST['input_direccion'])||isset($_POST['input_vehiculo'])){
+            $this->modelCartonero->InsertCartonero($_POST['input_nombre'],$_POST['input_dni'],$_POST['input_direccion'],$_POST['input_vehiculo']);
+        }
+        $this->CartonerosActivos();
+    
+    }
+    function EditarCartonero($params = null){
+        $cartonero_id = $params[':ID'];
+        $cartonero = $this->modelCartonero->GetCartonero($cartonero_id);
+        $cartoneros = $this->modelCartonero->GetCartoneros();
+        $this->view->mostrarEditarCartonero($cartonero, $cartoneros);
+    }
+
+    function ModificarCartonero(){
+        if(isset($_POST['cartonero_id'])||isset($_POST['edit_nombre'])||isset($_POST['edit_dni'])||isset($_POST['edit_direccion'])||isset($_POST['edit_vehiculo'])){
+            $this->modelCartonero->EditarCartonero($_POST['cartonero_id'],$_POST['edit_nombre'],$_POST['edit_dni'],$_POST['edit_direccion'],$_POST['edit_vehiculo']);
+        }
+        $this->CartonerosActivos();
+    
+    }
+    function DeleteCartonero($params=null){
+        $cartonero_id = $params[':ID'];
+        $this->modelCartonero->DeleteCartonero($cartonero_id);
+        $this->CartonerosActivos();
+    }
     function Domicilios(){
         $domicilios = $this->modelSolicitud->GetSolicitudes();
         $this->view->ShowDomicilios($domicilios);
