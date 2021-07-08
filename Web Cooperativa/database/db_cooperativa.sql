@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-07-2021 a las 21:37:14
+-- Tiempo de generación: 08-07-2021 a las 19:34:13
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.10
 
@@ -33,18 +33,22 @@ CREATE TABLE `cartonero` (
   `dni` int(9) NOT NULL,
   `direccion` varchar(150) NOT NULL,
   `vehiculo` varchar(150) NOT NULL,
-  `peso_materiales` int(10) DEFAULT NULL
+  `peso_vidrio` int(11) NOT NULL,
+  `peso_aluminio` int(11) NOT NULL,
+  `peso_plastico` int(11) NOT NULL,
+  `peso_papel` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `cartonero`
 --
 
-INSERT INTO `cartonero` (`id`, `nombre`, `dni`, `direccion`, `vehiculo`, `peso_materiales`) VALUES
-(2, 'Carlos Lopez', 30475882, 'Maipú 800', 'auto', NULL),
-(3, 'Martina Rodriguez', 37834474, 'Garibaldi 300', 'camioneta', 67),
-(6, 'pepe', 125, 'Moreno 21345', 'triciclo con rueditas', NULL),
-(7, 'Geralt', 1, 'Rivia', 'Sardinilla', NULL);
+INSERT INTO `cartonero` (`id`, `nombre`, `dni`, `direccion`, `vehiculo`, `peso_vidrio`, `peso_aluminio`, `peso_plastico`, `peso_papel`) VALUES
+(2, 'Carlos', 30475882, 'Maipú', 'hotWheels', 0, 2146483647, 369, 0),
+(3, 'Martina Rodriguez', 37834474, 'Garibaldi 300', 'camioneta', 0, 0, 123, 0),
+(6, 'pepe', 125, 'Moreno 21345', 'triciclo con rueditas', 0, 0, 0, 123),
+(7, 'Geralt', 1, 'Rivia', 'Roach', 0, 0, 0, 0),
+(9, 'Anteogito', 1212, 'pepe 123123', 'bici', 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -153,7 +157,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `cartonero`
 --
 ALTER TABLE `cartonero`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `material`
