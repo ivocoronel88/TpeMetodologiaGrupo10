@@ -55,7 +55,7 @@
             <p class="colorgreen">Cartonero</p>
             <select id="opcionesMateriales" name="input_material">
                 
-                    <option value="peso_vidrio>Peso Vidrio"</option>
+                    <option value="peso_vidrio">Peso Vidrio</option>
                     <option value="peso_aluminio">Peso Aluminio</option>
                     <option value="peso_plastico">Peso Plastico</option>
                     <option value="peso_papel">Peso Papel</option>
