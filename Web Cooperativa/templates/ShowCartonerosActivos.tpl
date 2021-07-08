@@ -14,6 +14,7 @@
                 <th scope="col">Peso Aluminio</th>
                 <th scope="col">Peso Plastico</th>
                 <th scope="col">Peso Papel</th>
+                <th scope="col">Editar y borrar</th>
             </tr>
         </thead>
         <tbody>
