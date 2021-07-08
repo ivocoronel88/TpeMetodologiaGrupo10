@@ -10,8 +10,10 @@
                 <th scope="col">Dni</th>
                 <th scope="col">Dirección</th>
                 <th scope="col">Vehiculo</th>
-                <th scope="col">Peso de Materiales</th>
-                <th scope="col">Editar y Borrar</th>
+                <th scope="col">Peso Vidrio</th>
+                <th scope="col">Peso Aluminio</th>
+                <th scope="col">Peso Plastico</th>
+                <th scope="col">Peso Papel</th>
             </tr>
         </thead>
         <tbody>
@@ -21,11 +23,10 @@
                             <td class="table-success">{$cartonero->dni}</td>
                             <td class="table-success">{$cartonero->direccion}</td>
                             <td class="table-success">{$cartonero->vehiculo}</td>
-                            {if $cartonero->peso_materiales eq NULL}
-                                <td class="table-success">No hay peso asignado</td>
-                            {else}
-                                <td class="table-success">{$cartonero->peso_materiales} kg</td>
-                            {/if}
+                            <td class="table-success">{$cartonero->peso_vidrio}</td>
+                            <td class="table-success">{$cartonero->peso_aluminio}</td>
+                            <td class="table-success">{$cartonero->peso_plastico}</td>
+                            <td class="table-success">{$cartonero->peso_papel}</td>
                             <td class="table-success">
                             <button type="button" class="btn btn-warning"><a class="text-white text-decoration-none" href="EditarCartonero/{$cartonero->id}">Menu</a></button>
                             <button type="button" class="btn btn-danger"><a class="text-white text-decoration-none" href="DeleteCartonero/{$cartonero->id}">Borrar</a></button>
@@ -49,6 +50,17 @@
                     {/foreach}
                 </select>
             </label>
+            <label for="opciones">
+            <p class="colorgreen">Cartonero</p>
+            <select id="opcionesMateriales" name="input_material">
+                
+                    <option value="peso_vidrio>Peso Vidrio"</option>
+                    <option value="peso_aluminio">Peso Aluminio</option>
+                    <option value="peso_plastico">Peso Plastico</option>
+                    <option value="peso_papel">Peso Papel</option>
+             
+            </select>
+        </label>
             <input type="number" name="input_peso" placeholder="Peso de la balanza">
             <button type="submit" class="botonEstilo btnlog">Enviar</button>
         </form>

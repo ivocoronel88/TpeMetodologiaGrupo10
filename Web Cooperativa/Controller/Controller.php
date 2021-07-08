@@ -40,10 +40,25 @@ class Controller{
     }
 
     function InsertPeso(){
-        if(isset($_POST['input_peso'])||isset($_POST['input_cartonero'])){
-            $cartonero = $this->modelCartonero->GetCartonero($_POST['input_cartonero']);
-            $peso= $_POST['input_peso'] + $cartonero->peso_materiales;
-            $this->modelCartonero->InsertPeso($peso,$_POST['input_cartonero']);
+        if(isset($_POST['input_peso'])||isset($_POST['input_cartonero'])||isset($_POST['input_material'])){
+            $cartonero = $this->modelCartonero->GetCartoneroDni($_POST['input_cartonero']);
+            if($_POST['input_material']=="peso_vidrio"){
+                $peso= $_POST['input_peso'] + $cartonero->peso_vidrio;
+                $this->modelCartonero->InsertPesoVidrio($peso,$_POST['input_cartonero']);
+            }
+            elseif($_POST['input_material']=="peso_aluminio"){
+                $peso= $_POST['input_peso'] + $cartonero->peso_aluminio;
+                $this->modelCartonero->InsertPesoAluminio($peso,$_POST['input_cartonero']);
+            }elseif($_POST['input_material']=="peso_plastico"){
+
+                $peso= $_POST['input_peso'] + $cartonero->peso_plastico;
+                $this->modelCartonero->InsertPesoPlastico($peso,$_POST['input_cartonero']);
+            }elseif($_POST['input_material']=="peso_papel"){
+
+
+                $peso= $_POST['input_peso'] + $cartonero->peso_papel;
+                $this->modelCartonero->InsertPesoPapel($peso,$_POST['input_cartonero']);
+            }
         }
         $this->CartonerosActivos();
     }

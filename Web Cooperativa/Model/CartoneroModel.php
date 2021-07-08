@@ -17,8 +17,25 @@ class CartoneroModel{
        $sentencia->execute([$cartonero_id]);
        return $sentencia->fetch(PDO::FETCH_OBJ);
     }
-    function InsertPeso($peso,$cartonero_dni){
-        $sentencia = $this->db->prepare("UPDATE cartonero SET peso_materiales=? WHERE dni=? ");
+    function GetCartoneroDni($cartonero_dni){
+        $sentencia = $this->db->prepare("SELECT * FROM cartonero WHERE dni=? ");
+        $sentencia->execute([$cartonero_dni]);
+        return $sentencia->fetch(PDO::FETCH_OBJ);
+     }
+    function InsertPesoVidrio($peso,$cartonero_dni){
+        $sentencia = $this->db->prepare("UPDATE cartonero SET peso_vidrio=? WHERE dni=? ");
+        $sentencia->execute(array($peso,$cartonero_dni));
+    }
+    function InsertPesoAluminio($peso,$cartonero_dni){
+        $sentencia = $this->db->prepare("UPDATE cartonero SET peso_aluminio=? WHERE dni=? ");
+        $sentencia->execute(array($peso,$cartonero_dni));
+    }
+    function InsertPesoPlastico($peso,$cartonero_dni){
+        $sentencia = $this->db->prepare("UPDATE cartonero SET peso_plastico=? WHERE dni=? ");
+        $sentencia->execute(array($peso,$cartonero_dni));
+    }
+    function InsertPesoPapel($peso,$cartonero_dni){
+        $sentencia = $this->db->prepare("UPDATE cartonero SET peso_papel=? WHERE dni=? ");
         $sentencia->execute(array($peso,$cartonero_dni));
     }
 
